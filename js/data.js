@@ -17,7 +17,7 @@ var threeSize = new Array(
 //   "haruka",
 // );
 for(x in threeSize){
-  json.push(x);
+  json.push(threeSize[x]);
 }
 var objs = eval(json);
 alert(objs[0].W);
