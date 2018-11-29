@@ -12,7 +12,7 @@ optionNumbers[correctPosition] = n;
 var i = 0;
 
 while(i<4){
-    if(optionNumber[i] != -1){
+    if(optionNumbers[i] != -1){
         i++;
         break;
     }
