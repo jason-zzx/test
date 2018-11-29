@@ -23,3 +23,7 @@ label{
   border-radius: 8px;
   text-align: center;
 }
+
+.answer-area:hover{
+  background-color: #aaaab5;
+}
