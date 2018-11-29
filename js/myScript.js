@@ -10,17 +10,17 @@ var optionNumbers = new Array(n,-1,-1,-1);
 var i = 1;
 
 while(i<5){
-  var tmp = Math.floor(Math.random()*100) % t;
-  var valid = true;
-  for(int j = 0; j < i; j++){
-    if(optionNumbers[j] == tmp){
-      valid = false;
-      break;
+    var tmp = Math.floor(Math.random()*100) % t;
+    var valid = true;
+    for(int j = 0; j < i; j++){
+        if(optionNumbers[j] == tmp){
+            valid = false; 
+            break;
+        }
     }
-  }
-  if(valid){
-    optionNumbers[i] = tmp;
-    i++;
-  }
+    if(valid){
+        optionNumbers[i] = tmp;
+        i++;
+    }
 }
 alert(optionNumbers);
