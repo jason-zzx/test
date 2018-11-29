@@ -38,4 +38,8 @@ while(i<4){
     }
 }
 
-alert(optionNumbers+"  correct:"+correctPosition);
+//alert(optionNumbers+"  correct:"+correctPosition);
+
+for(var i = 0;i<4;i++){
+    $(".answer-area:eq("+i+")").html(idolName[optionNumbers[i]]);
+}
