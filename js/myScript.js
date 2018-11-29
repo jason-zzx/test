@@ -14,7 +14,7 @@ var i = 0;
 while(i<4){
     if(optionNumbers[i] != -1){
         i++;
-        break;
+        continue;
     }
     var tmp = Math.floor(Math.random()*100) % t;
     while(tmp==n){
@@ -24,7 +24,7 @@ while(i<4){
     if(i==0){
         optionNumbers[0] = tmp;
         i++;
-        break;
+        continue;
     }
     for(var j = 0; j < i; j++){
         if(optionNumbers[j] == tmp){
