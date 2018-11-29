@@ -12,25 +12,29 @@ optionNumbers[correctPosition] = n;
 var i = 0;
 
 while(i<4){
+    if(optionNumber[i] != -1){
+        i++;
+        break;
+    }
     var tmp = Math.floor(Math.random()*100) % t;
     while(tmp==n){
         tmp = Math.floor(Math.random()*100) % t;
     }
     var valid = true;
-    if(optionNumbers[0] == -1){
+    if(i==0){
         optionNumbers[0] = tmp;
         i++;
-    }else{
-        for(var j = 0; j < i; j++){
-            if(optionNumbers[j] == tmp){
-                valid = false; 
-                break;
-            }
+        break;
+    }
+    for(var j = 0; j < i; j++){
+        if(optionNumbers[j] == tmp){
+            valid = false; 
+            break;
         }
-        if(valid){
-            optionNumbers[i] = tmp;
-            i++;
-        }
+    }
+    if(valid){
+        optionNumbers[i] = tmp;
+        i++;
     }
 }
 
