@@ -38,4 +38,4 @@ while(i<4){
     }
 }
 
-alert(optionNumbers);
+alert(optionNumbers+"  correct:"+correctPosition);
