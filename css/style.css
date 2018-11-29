@@ -16,3 +16,9 @@ label,span{
 label{
   width: 25px;
 }
+
+.answer-area{
+  width:200px;
+  margin-left:10%;
+  text-align:center;
+}
