@@ -42,4 +42,19 @@ while(i<4){
 
 for(var i = 0;i<4;i++){
     $(".answer-area:eq("+i+")").html(idolName[optionNumbers[i]]);
+    if(i==correctPosition){
+        $(".answer-area:eq("+i+")").addClass("answer-correct");
+    }else{
+        $(".answer-area:eq("+i+")").addClass("answer-wrong");
+    }
 }
+
+$(".answer-correct").click(function(){
+    alert("正确");
+    window.location.reload();
+});
+
+$(".answer-wrong").click(function(){
+    alert("错误\n正确: "+idolName[optionNumbers[correctPosition]]);
+    window.location.reload();
+});
