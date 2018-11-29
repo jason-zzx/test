@@ -2,9 +2,9 @@ var objs = eval(json);
 var t = objs.length;
 var n = Math.floor(Math.random()*100) % t;
 
-document.querySelector(".b-field").innerHTML(objs[n].B);
-document.querySelector(".w-field").innerHTML(objs[n].W);
-document.querySelector(".h-field").innerHTML(objs[n].H);
+document.querySelector(".b-field").innerHTML=objs[n].B;
+document.querySelector(".w-field").innerHTML=objs[n].W;
+document.querySelector(".h-field").innerHTML=objs[n].H;
 // $(".b-field").html(objs[n].B);
 // $(".w-field").html(objs[n].W);
 // $(".h-field").html(objs[n].H);
