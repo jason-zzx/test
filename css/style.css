@@ -3,7 +3,16 @@
   max-width: 800px;
   margin: auto;
 }
+
 .style-1{
   text-align: center;
   height: 25px;
+}
+
+label,span{
+  display: inline-block;
+}
+
+label{
+  width: 22px;
 }
