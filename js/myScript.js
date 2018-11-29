@@ -12,7 +12,7 @@ var i = 1;
 while(i<5){
     var tmp = Math.floor(Math.random()*100) % t;
     var valid = true;
-    for(int j = 0; j < i; j++){
+    for(var j = 0; j < i; j++){
         if(optionNumbers[j] == tmp){
             valid = false; 
             break;
