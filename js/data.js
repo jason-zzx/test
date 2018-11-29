@@ -26,5 +26,5 @@ var idolValue = new Array(
 for(x in threeSize){
   json.push(threeSize[x]);
 }
-var objs = eval(json);
+//var objs = eval(json);
 //alert(objs[0].W);
