@@ -105,8 +105,11 @@ function generateResult(){
         comment = "大概这就是DD8";
     else if(rate>=0.5)
         comment = "DD失格";
+    else if(rate>=0.3)
+        comment = "太菜了，再回去练练8";
     else
         comment = "你是单推，我信了";
+    comment += "\n<a href=\"https://jason-zzx.github.io/test/3_size_test.html\">重新开始</a>";
     $(".result-comment").html(comment);
 }
 
