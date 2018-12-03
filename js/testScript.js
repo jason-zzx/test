@@ -114,5 +114,5 @@ var objs = eval(json);
 var t = objs.length;
 var n = Math.floor(Math.random()*100) % t;
 
-// document.querySelector(".style-1").innerHTML=objs[n].B;
-alert(objs[n].B+"  4");
+ document.querySelector(".style-1").innerHTML="test";
+alert(abc+"  4");
