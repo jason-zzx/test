@@ -114,5 +114,5 @@ var objs = eval(json);
 var t = objs.length;
 var n = Math.floor(Math.random()*100) % t;
 
-$(".style-1").text(objs[n].B);
+$(".style-1").text("12");
 alert(objs[n].B+"  6");
