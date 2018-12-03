@@ -106,7 +106,7 @@ function generateResult(){
     else if(rate>=0.5)
         comment = "DD失格";
     else if(rate>=0.3)
-        comment = "太菜了，再回去练练8";
+        comment = "太菜了，是想假装成单推的DD吗（察觉）";
     else
         comment = "你是单推，我信了";
     comment += "\n<a href=\"https://jason-zzx.github.io/test/3_size_test.html\">重新开始</a>";
