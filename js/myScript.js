@@ -3,21 +3,32 @@ var objs = eval(json);
 var t = objs.length;
 var count = 0;
 var count_correct = 0;
+var answer_record = new Array(49);
+for(x in answer_record){
+    answer_record[x] = x;
+}
 
 function generateQuestion(){
+    if(count==49){
+        alert("没有更多了");
+        return;
+    }
     $(".answer-area").removeClass("correct-answered");
     $(".answer-area").removeClass("wrong-answered");
     $(".answer-area").removeClass("answer-correct");
     $(".answer-area").removeClass("answer-wrong");
     var answered = false;
     
-    var n = Math.floor(Math.random()*100) % t;
+    var n = Math.floor(Math.random()*1000) % t;
+    while(answer_record[n] == -1){
+        n = Math.floor(Math.random()*1000) % t;
+    }
 
     $(".b-field").html(objs[n].B);
     $(".w-field").html(objs[n].W);
     $(".h-field").html(objs[n].H);
 
-    var correctPosition = Math.floor(Math.random()*100) % 4;
+    var correctPosition = Math.floor(Math.random()*1000) % 4;
     var optionNumbers = new Array(-1,-1,-1,-1);
     optionNumbers[correctPosition] = n;
     var i = 0;
@@ -27,9 +38,9 @@ function generateQuestion(){
             i++;
             continue;
         }
-        var tmp = Math.floor(Math.random()*100) % t;
+        var tmp = Math.floor(Math.random()*1000) % t;
         while(tmp==n){
-            tmp = Math.floor(Math.random()*100) % t;
+            tmp = Math.floor(Math.random()*1000) % t;
         }
         var valid = true;
         if(i==0){
@@ -64,6 +75,7 @@ function generateQuestion(){
             answered = true;
             count++;
             count_correct++;
+            answer_record[n] == -1
             $(".answer-correct").addClass("correct-answered");
         }
     });
@@ -72,6 +84,7 @@ function generateQuestion(){
         if(!answered){
             answered = true;
             count++;
+            answer_record[n] == -1
             $(this).addClass("wrong-answered");
             $(".answer-correct").addClass("correct-answered");
         }
