@@ -115,4 +115,4 @@ var t = objs.length;
 var n = Math.floor(Math.random()*100) % t;
 
 $(".style-1").text("12");
-alert(objs[n].B+"  6");
+alert(objs[n].B+"  7");
