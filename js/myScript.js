@@ -1,6 +1,8 @@
 
 var objs = eval(json);
 var t = objs.length;
+var count = 0;
+var count_correct = 0;
 
 function generateQuestion(){
     $(".answer-area").removeClass("correct-answered");
@@ -60,6 +62,8 @@ function generateQuestion(){
     $(".answer-correct").click(function(){
         if(!answered){
             answered = true;
+            count++;
+            count_correct++;
             $(".answer-correct").addClass("correct-answered");
         }
     });
@@ -67,6 +71,7 @@ function generateQuestion(){
     $(".answer-wrong").click(function(){
         if(!answered){
             answered = true;
+            count++;
             $(this).addClass("wrong-answered");
             $(".answer-correct").addClass("correct-answered");
         }
@@ -74,6 +79,21 @@ function generateQuestion(){
     });
 }
 
-
+function generateResult(){
+    $(".result-count").html("你答对了"+count_correct+"/"+count+"题");
+    var comment;
+    var rate = count_correct / count;
+    if(count<5)
+        comment = "再去多答几题8";
+    else if(rate==1)
+        comment = "臭DD，当场抓获";
+    else if(rate>=0.8)
+        comment = "大概这就是DD8";
+    else if(rate>=0.5)
+        comment = "DD失格";
+    else
+        comment = "你是单推，我信了";
+    $(".result-comment").html(comment);
+}
 
 generateQuestion();
