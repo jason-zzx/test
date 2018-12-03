@@ -93,6 +93,7 @@ function generateQuestion(){
 }
 
 function generateResult(){
+    $(".question-area").hide();
     $(".result-count").html("你答对了"+count_correct+"/"+count+"题");
     var comment;
     var rate = count_correct / count;
