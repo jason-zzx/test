@@ -54,12 +54,12 @@ for(var i = 0;i<4;i++){
 }
 
 $(".answer-correct").click(function(){
-    $(".answer-correct").addClass(".correct-answered");
+    $(".answer-correct").addClass("correct-answered");
 //     window.location.reload();
 });
 
 $(".answer-wrong").click(function(){
-    this.addClass(".wrong-answered");
-    $(".answer-correct").addClass(".correct-answered");
+    this.addClass("wrong-answered");
+    $(".answer-correct").addClass("correct-answered");
 //     window.location.reload();
 });
