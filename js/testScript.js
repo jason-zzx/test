@@ -115,4 +115,4 @@ var t = objs.length;
 var n = Math.floor(Math.random()*100) % t;
 
 document.getElementsByClassName("style-1").innerHTML="<span>ABC</span>";
-alert(objs[n].B+"  8");
+alert(objs[n].B+"  9");
