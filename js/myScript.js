@@ -54,11 +54,12 @@ for(var i = 0;i<4;i++){
 }
 
 $(".answer-correct").click(function(){
-    alert("正确");
-    window.location.reload();
+    $(".answer-correct").addClass(".correct-answered");
+//     window.location.reload();
 });
 
 $(".answer-wrong").click(function(){
-    alert("错误\n正确: "+idolName[optionNumbers[correctPosition]]);
-    window.location.reload();
+    this.addClass(".wrong-answered");
+    $(".answer-correct").addClass(".correct-answered");
+//     window.location.reload();
 });
