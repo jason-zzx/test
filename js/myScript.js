@@ -1,14 +1,13 @@
 
 var objs = eval(json);
 var t = objs.length;
-var answered = false;
 
 function generateQuestion(){
     $(".answer-area").removeClass("correct-answered");
     $(".answer-area").removeClass("wrong-answered");
     $(".answer-area").removeClass("answer-correct");
     $(".answer-area").removeClass("answer-wrong");
-    answered = false;
+    var answered = false;
     
     var n = Math.floor(Math.random()*100) % t;
 
@@ -56,23 +55,25 @@ function generateQuestion(){
             $(".answer-area:eq("+i+")").addClass("answer-wrong");
         }
     }
+    
+    
+    $(".answer-correct").click(function(){
+        if(!answered){
+            answered = true;
+            $(".answer-correct").addClass("correct-answered");
+        }
+    });
+
+    $(".answer-wrong").click(function(){
+        if(!answered){
+            answered = true;
+            $(this).addClass("wrong-answered");
+            $(".answer-correct").addClass("correct-answered");
+        }
+    //     window.location.reload();
+    });
 }
 
 
-$(".answer-correct").click(function(){
-    if(!answered){
-        answered = true;
-        $(".answer-correct").addClass("correct-answered");
-    }
-});
-
-$(".answer-wrong").click(function(){
-    if(!answered){
-        answered = true;
-        $(this).addClass("wrong-answered");
-        $(".answer-correct").addClass("correct-answered");
-    }
-//     window.location.reload();
-});
 
 generateQuestion();
