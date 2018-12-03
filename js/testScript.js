@@ -7,7 +7,7 @@ var idolName = new Array(
   "天海春香"
 );
 var idolValue = new Array(
-  "haruka",
+  "haruka"
 );
 for(x in threeSize){
   json.push(threeSize[x]);
