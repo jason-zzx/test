@@ -115,4 +115,4 @@ var t = objs.length;
 var n = Math.floor(Math.random()*100) % t;
 
 document.querySelector(".style-1").innerHTML=objs[n].B;
-alert(t+"4");
+alert(t+"  4");
