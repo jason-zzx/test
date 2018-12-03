@@ -103,7 +103,7 @@ var idolName = new Array(
   "桜守歌織"
 );
 var idolValue = new Array(
-  "haruka",
+  "haruka"
 );
 for(x in threeSize){
   json.push(threeSize[x]);
