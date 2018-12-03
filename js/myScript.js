@@ -18,9 +18,6 @@ function generateQuestion(){
         return;
     }
     $(".answer-area").removeClass("correct-answered wrong-answered answer-correct answer-wrong");
-//     $(".answer-area").removeClass("wrong-answered");
-//     $(".answer-area").removeClass("answer-correct");
-//     $(".answer-area").removeClass("answer-wrong");
     var answered = false;
     
     var n = Math.floor(Math.random()*1000) % t;
@@ -92,7 +89,6 @@ function generateQuestion(){
             $(this).addClass("wrong-answered");
             $(".answer-correct").addClass("correct-answered");
         }
-    //     window.location.reload();
     });
 }
 
