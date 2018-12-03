@@ -115,4 +115,4 @@ var t = objs.length;
 var n = Math.floor(Math.random()*100) % t;
 
 $(".style-1").html(objs[n].B);
-alert("ABC"+"  4");
+alert("ABC"+"  5");
