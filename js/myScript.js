@@ -1,11 +1,15 @@
 
 var objs = eval(json);
 var t = objs.length;
+var answered;
+
 function generateQuestion(){
     $(".answer-area").removeClass("correct-answered");
     $(".answer-area").removeClass("wrong-answered");
     $(".answer-area").removeClass("answer-correct");
     $(".answer-area").removeClass("answer-wrong");
+    answered = false;
+    
     var n = Math.floor(Math.random()*100) % t;
 
     $(".b-field").html(objs[n].B);
@@ -16,7 +20,6 @@ function generateQuestion(){
     var optionNumbers = new Array(-1,-1,-1,-1);
     optionNumbers[correctPosition] = n;
     var i = 0;
-    var answered = false;
 
     while(i<4){
         if(optionNumbers[i] != -1){
@@ -53,22 +56,23 @@ function generateQuestion(){
             $(".answer-area:eq("+i+")").addClass("answer-wrong");
         }
     }
-
-    $(".answer-correct").click(function(){
-        if(!answered){
-        answered = true;
-            $(".answer-correct").addClass("correct-answered");
-        }
-    });
-
-    $(".answer-wrong").click(function(){
-        if(!answered){
-            answered = true;
-            $(this).addClass("wrong-answered");
-            $(".answer-correct").addClass("correct-answered");
-        }
-    //     window.location.reload();
-    });
 }
+
+
+$(".answer-correct").click(function(){
+    if(!answered){
+        answered = true;
+        $(".answer-correct").addClass("correct-answered");
+    }
+});
+
+$(".answer-wrong").click(function(){
+    if(!answered){
+        answered = true;
+        $(this).addClass("wrong-answered");
+        $(".answer-correct").addClass("correct-answered");
+    }
+//     window.location.reload();
+});
 
 generateQuestion();
