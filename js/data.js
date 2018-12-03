@@ -1,4 +1,3 @@
-var json = [];
 var threeSize = new Array(
   {B:'83',W:'56',H:'82'},
   {B:'72',W:'52',H:'78'},
@@ -50,7 +49,7 @@ var threeSize = new Array(
   {B:'82',W:'56',H:'83'},
   {B:'88',W:'58',H:'85'}
 );
-//threeSize[1] = {B:'72',W:'52',H:'78'}; 
+
 var idolName = new Array(
   "天海春香",
   "如月千早",
@@ -102,11 +101,3 @@ var idolName = new Array(
   "白石紬",
   "桜守歌織"
 );
-var idolValue = new Array(
-  "haruka"
-);
-for(x in threeSize){
-  json.push(threeSize[x]);
-}
-//var objs = eval(json);
-//alert(objs[0].W);
