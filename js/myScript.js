@@ -1,3 +1,7 @@
+var json = [];
+for(x in threeSize){
+  json.push(threeSize[x]);
+}
 
 var objs = eval(json);
 var t = objs.length;
@@ -98,7 +102,7 @@ function generateResult(){
     var comment;
     var rate = count_correct / count;
     if(count<5)
-        comment = "再去多答几题8";
+        comment = "这你也要摸？再去多答几题8";
     else if(rate==1)
         comment = "臭DD，当场抓获";
     else if(rate>=0.8)
