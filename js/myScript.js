@@ -2,6 +2,10 @@
 var objs = eval(json);
 var t = objs.length;
 function generateQuestion(){
+    $(".answer-area").removeClass("correct-answered");
+    $(".answer-area").removeClass("wrong-answered");
+    $(".answer-area").removeClass("answer-correct");
+    $(".answer-area").removeClass("answer-wrong");
     var n = Math.floor(Math.random()*100) % t;
 
     $(".b-field").html(objs[n].B);
