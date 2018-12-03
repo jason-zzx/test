@@ -1,7 +1,7 @@
 
 var objs = eval(json);
 var t = objs.length;
-var answered;
+var answered = false;
 
 function generateQuestion(){
     $(".answer-area").removeClass("correct-answered");
