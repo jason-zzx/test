@@ -14,6 +14,7 @@ var correctPosition = Math.floor(Math.random()*100) % 4;
 var optionNumbers = new Array(-1,-1,-1,-1);
 optionNumbers[correctPosition] = n;
 var i = 0;
+var answered = false;
 
 while(i<4){
     if(optionNumbers[i] != -1){
@@ -54,15 +55,17 @@ for(var i = 0;i<4;i++){
 }
 
 $(".answer-correct").click(function(){
-    $(".answer-correct").addClass("correct-answered");
-    $(".answer-area").removeClass("answer-correct");
-    $(".answer-area").removeClass("answer-wrong");
+    if(!answered){
+    answered = true;
+        $(".answer-correct").addClass("correct-answered");
+    }
 });
 
 $(".answer-wrong").click(function(){
-    $(this).addClass("wrong-answered");
-    $(".answer-correct").addClass("correct-answered");
-    $(".answer-area").removeClass("answer-correct");
-    $(".answer-area").removeClass("answer-wrong");
+    if(!answered){
+        answered = true;
+        $(this).addClass("wrong-answered");
+        $(".answer-correct").addClass("correct-answered");
+    }
 //     window.location.reload();
 });
