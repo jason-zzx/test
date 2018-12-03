@@ -29,3 +29,11 @@ label{
 .answer-area:hover{
   background-color: #ececec;
 }
+
+.correct-answered{
+  border: #1bda1f 2px solid;
+}
+
+.wrong-answered{
+  border: red 2px solid;
+}
