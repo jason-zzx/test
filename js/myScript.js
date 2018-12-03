@@ -55,11 +55,15 @@ for(var i = 0;i<4;i++){
 
 $(".answer-correct").click(function(){
     $(".answer-correct").addClass("correct-answered");
+    $(".answer-area").removeClass("answer-correct");
+    $(".answer-area").removeClass("answer-wrong");
 //     window.location.reload();
 });
 
 $(".answer-wrong").click(function(){
     $(this).addClass("wrong-answered");
     $(".answer-correct").addClass("correct-answered");
+    $(".answer-area").removeClass("answer-correct");
+    $(".answer-area").removeClass("answer-wrong");
 //     window.location.reload();
 });
