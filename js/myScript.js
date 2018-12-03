@@ -13,10 +13,10 @@ function generateQuestion(){
         alert("没有更多了");
         return;
     }
-    $(".answer-area").removeClass("correct-answered");
-    $(".answer-area").removeClass("wrong-answered");
-    $(".answer-area").removeClass("answer-correct");
-    $(".answer-area").removeClass("answer-wrong");
+    $(".answer-area").removeClass("correct-answered wrong-answered answer-correct answer-wrong");
+//     $(".answer-area").removeClass("wrong-answered");
+//     $(".answer-area").removeClass("answer-correct");
+//     $(".answer-area").removeClass("answer-wrong");
     var answered = false;
     
     var n = Math.floor(Math.random()*1000) % t;
