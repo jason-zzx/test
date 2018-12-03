@@ -59,7 +59,7 @@ $(".answer-correct").click(function(){
 });
 
 $(".answer-wrong").click(function(){
-    this.addClass("wrong-answered");
+    $(this).addClass("wrong-answered");
     $(".answer-correct").addClass("correct-answered");
 //     window.location.reload();
 });
